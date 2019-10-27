@@ -134,7 +134,7 @@ int		ciclo(char servico)
 
 int		inicia_trabalhos()
 {
-	printf("***** iniciando expediente CAPACIDADE=%d CLIENTES *****\n\n", CAPACIDADE);
+	printf("\n\n\n***** iniciando expediente CAPACIDADE=%d CLIENTES *****\n", CAPACIDADE);
 
 	for (int i = 0; i < CAPACIDADE; i += 1)
 		cad[i].nome[0] = 0;

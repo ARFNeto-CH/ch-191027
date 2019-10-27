@@ -22,7 +22,8 @@ int			main(int argc, char** argv)
 	// L - lista a situacao
 	// A - tenta atender alguem
 	//
-	// cad lera indica uma acao para nao ter que ficar usando o menu
+	// cada letra indica uma acao para nao ter que ficar usando o menu
+	// e o menu pode apontar para as acoes para nao ter que programar mais nada
 	//
 	if (argc > 1)	// veio algo na linha de comando
 	{
@@ -30,11 +31,13 @@ int			main(int argc, char** argv)
 		testa_rotina(argv[1]);
 		return 0;
 	}	// end if
+
 	inicia_trabalhos();
+
 	//char* rotina = "LNNNNNNNLAAAAAAALPPPAAAL";
 	//char* rotina = "LNNNPAALALAL";
 	//char* rotina = "LNNNNPPPPLAAAAAAAL";
-	char* rotina = "LNNNNPPPPLAAAAAAAPPPPLAAALAL";
+	char* rotina = "LNNNNNNPPPPLAAAAAAAAAAAL";
 	testa_rotina(rotina);
 	return 0;
 }	// end main()
@@ -42,7 +45,7 @@ int			main(int argc, char** argv)
 
 int	testa_rotina(char* servico)
 {
-	printf("\n\n***** Rotina=[%s] *****\n", servico);
+	printf("\n***** Rotina=[%s] Capacidade %d *****\n", servico, CAPACIDADE);
 	int n = strlen(servico);
 	printf("\nTotal de acoes: %d\n\n", n);
 	for (int i = 0; i < n; i++)
