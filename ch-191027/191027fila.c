@@ -11,20 +11,20 @@
 int			testa_rotina(char* servico);
 
 
+//
+// opcao: rodar com 'fila rotina'
+// por exemplo 'fila NNNNPPPPLA'
+// sao NPLA para
+// N - entra cliente normal
+// P - entra cliente com prioridade de atendimento
+// L - lista a situacao
+// A - tenta atender alguem
+//
+// cada letra indica uma acao para nao ter que ficar usando o menu
+// e o menu pode apontar para as acoes para nao ter que programar mais nada
+//
 int			main(int argc, char** argv)
 {
-	//
-	// opcao: rodar com 'fila rotina'
-	// por exemplo 'fila NNNNPPPPLA'
-	// sao NPLA para
-	// N - entra cliente normal
-	// P - entra cliente com prioridade de atendimento
-	// L - lista a situacao
-	// A - tenta atender alguem
-	//
-	// cada letra indica uma acao para nao ter que ficar usando o menu
-	// e o menu pode apontar para as acoes para nao ter que programar mais nada
-	//
 	if (argc > 1)	// veio algo na linha de comando
 	{
 		inicia_trabalhos();
@@ -33,11 +33,7 @@ int			main(int argc, char** argv)
 	}	// end if
 
 	inicia_trabalhos();
-
-	//char* rotina = "LNNNNNNNLAAAAAAALPPPAAAL";
-	//char* rotina = "LNNNPAALALAL";
-	//char* rotina = "LNNNNPPPPLAAAAAAAL";
-	char* rotina = "LNNNNNNPPPPLAAAAAAAAAAAL";
+	char* rotina = "LNNNNPPPPLAAL";
 	testa_rotina(rotina);
 	return 0;
 }	// end main()
